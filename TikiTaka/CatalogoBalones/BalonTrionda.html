@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balón Trionda</title>
+    <link rel="stylesheet" href="Catalogo1.css">
+    <link rel="stylesheet" href="/TikiTaka/InicioTikiTaka.css">
+</head>
+<body>
+    <header>
+     <a href="/TikiTaka/InicioTikiTaka - 2.html">
+         <img src="/TikiTaka/ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+     </a>
+     <h1 class="nombre">Tiki-Taka</h1>
+     <div class="head">
+         <a href="/TikiTaka/InicioTikiTaka - 2.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+         <a href="/TikiTaka/FQA/FQA - 2.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+         <a href="/TikiTaka/Login y registro TikiTiki/LoginTikiTaka - 2.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+     </div>
+    </header>
+<element class="Producto">
+    <section id="Producto">
+      <div class="galeria">
+         <button class="flecha izquierda" id="anterior">&#10094;</button>
+         <img id="imagenPrincipal" src="ImagenesCatalogBalones/BalonTrionda.webp" alt="Balón Trionda">
+         <button class="flecha derecha" id="siguiente"> &#10095; </button>
+         <div class="indicadores">
+            <span class="punto activo"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+         </div>
+      </div>
+         <div class="inf" style="padding-top: 0;">
+               <div class="heroProducto">
+                  <span class="categoria">
+                     BALÓN OFICIAL FIFA
+                  </span>
+                  <h1>
+                     TRIONDA
+                  </h1>
+                  <p class="subtitulo">
+                     Copa Mundial de la FIFA 2026™
+                  </p>
+                  <div class="etiquetas">
+                     <span>⚽ Adidas</span>
+                     <span>🌎 Mundial 2026</span>
+                     <span>✔ Oficial FIFA</span>
+                  </div>
+               </div>
+               <p>El Adidas Trionda es el balón de fútbol oficial de la Copa Mundial de Fútbol de 2026, que se está celebrando en Canadá, Estados Unidos y México. Fue presentado oficialmente el 2 de octubre de 2025 por la empresa alemana Adidas, proveedor histórico de los balones de la Copa Mundial de la FIFA desde 1970.</p>
+               <p>El llamativo diseño del esférico presenta un patrón rojo, verde y azul que rinde homenaje a los tres países coanfitriones, mientras que la novedosa construcción a partir de cuatro paneles con fluidas figuras geométricas reproduce las ondas a las que hace referencia su nombre.</p><br>
+               <h2 class="tituloSeccion">
+                  Especificaciones técnicas
+               </h2>
+               <p class="descripcionSeccion">
+                  Características oficiales del balón Adidas Trionda para la Copa Mundial de la FIFA 2026™.
+               </p>
+               <div class="especificaciones">
+               <div class="especificacion">
+                  <div class="icono">
+                     📏
+                  </div>
+                  <strong>Tamaño</strong>
+                  <span>N.º 5</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⚖️
+                  </div>
+                  <strong>Peso</strong>
+                  <span>410–450 g</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⭕
+                  </div>
+                  <strong>Circunferencia</strong>
+                  <span>68–70 cm</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🧵
+                  </div>
+                  <strong>Material exterior</strong>
+                  <span>Cuero sintético</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🔷
+                  </div>
+                  <strong>Número de paneles</strong>
+                  <span>32</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🪡
+                  </div>
+                  <strong>Tipo de costura</strong>
+                  <span>Cosido a máquina</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⚽
+                  </div>
+                  <strong>Uso recomendado</strong>
+                  <span>Entrenamiento, recreación y competencias escolares</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🌱
+                  </div>
+                  <strong>Superficies recomendadas</strong>
+                  <span>Césped natural, césped sintético y tierra</span>
+               </div>
+               </div>
+    </section>
+</element>
+    <button id="btnVolver" onclick="Volver()">
+     ←
+    </button>
+
+    <script>
+
+      function Volver(){
+         
+      return window.location.href = "/Tikitaka/balonesTikitaka.html";
+      };
+
+      const principal = document.getElementById("imagenPrincipal");
+
+      const imagenes = [
+         "ImagenesCatalogBalones/BalonTrionda.webp",
+         "ImagenesCatalogBalones/BalonTrionda2.webp",
+         "ImagenesCatalogBalones/BalonTrionda3.avif",
+         "ImagenesCatalogBalones/BalonTrionda4.jpg"
+      ];
+
+      let indice = 0;
+
+      const imagen = document.getElementById("imagenPrincipal");
+
+      const puntos = document.querySelectorAll(".punto");
+
+      function actualizarGaleria(){
+         imagen.style.opacity = 0;
+         setTimeout(()=>{
+            imagen.src = imagenes[indice];
+            imagen.style.opacity = 1;
+         },180);
+         puntos.forEach(p=>p.classList.remove("activo"));
+         puntos[indice].classList.add("activo");
+      }
+
+      document.getElementById("siguiente").onclick=()=>{
+         indice++;
+         if(indice>=imagenes.length){
+            indice=0;
+         }
+         actualizarGaleria();
+      };
+
+      document.getElementById("anterior").onclick=()=>{
+         indice--;
+         if(indice<0){
+            indice=imagenes.length-1;
+         }
+         actualizarGaleria();
+      };
+
+      puntos.forEach((punto,i)=>{
+         punto.onclick=()=>{
+            indice=i;
+            actualizarGaleria();
+         };
+      });
+    </script>
+  
+</body>
+</html>

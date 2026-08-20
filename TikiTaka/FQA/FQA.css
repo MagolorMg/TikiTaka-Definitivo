@@ -1,0 +1,206 @@
+/* Reset de estilos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Header / Navegación */
+header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+.head a strong{
+    transition: .3s;
+}
+.head a :hover{
+    transition: .3s;
+}
+
+.head a strong:hover{
+    color: rgb(34, 107, 0);
+}
+.head a:hover{
+    border-bottom: 3px solid rgb(34, 107, 0);
+}
+h1{
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 35px;
+}
+
+div.head{
+    font-size: 22px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+a#head-inicio{
+    color: black;
+    text-decoration: none;
+}
+a#head-ayuda{
+    color: black;
+    text-decoration: none;
+}
+a#head-sesion{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Hero Section (Banner superior) */
+.hero-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: flex;
+  height: 320px;
+  overflow: hidden;
+}
+
+.hero-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Sección FAQ */
+.faq-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: flex;
+  padding: 0 20px;
+  display: flex;
+  gap: 40px;
+}
+
+/* Columna Izquierda */
+.faq-left {
+  flex: 0 0 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-title {
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1.15;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.shirts-image-container {
+  width: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px rgba(12, 12, 12, 0.199);
+}
+
+.shirts-image-container img {
+  width: flex;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Columna Derecha - Tarjetas */
+.faq-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-card {
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.faq-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.shape-icon {
+  font-size: 14px;
+  color: #7d848a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-card h2 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111111;
+  line-height: 1.25;
+}
+
+.faq-card p {
+  font-size: 12px;
+  color: #666666;
+  line-height: 1.5;
+  padding-left: 24px;
+  font-weight: 500;
+}
+
+a.link{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    font-size: 23px;
+    margin: 0%;
+    max-width: 350px;
+    padding-left: 30px;
+    padding-bottom: 45px;
+}
+
+a#link{
+    text-decoration: none;
+    font-size: 15x;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif; 
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 850px) {
+  .faq-container {
+    flex-direction: column;
+  }
+  .faq-left {
+    flex: none;
+    width: 100%;
+  }
+}

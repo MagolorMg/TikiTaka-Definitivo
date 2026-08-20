@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balón Champions League 25/26</title>
+    <link rel="stylesheet" href="Catalogo1.css">
+    <link rel="stylesheet" href="/TikiTaka/InicioTikiTaka.css">
+</head>
+<body>
+    <header>
+     <a href="/TikiTaka/InicioTikiTaka - 2.html">
+         <img src="/TikiTaka/ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+     </a>
+     <h1 class="nombre">Tiki-Taka</h1>
+     <div class="head">
+         <a href="/TikiTaka/InicioTikiTaka - 2.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+         <a href="/TikiTaka/FQA/FQA - 2.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+         <a href="/TikiTaka/Login y registro TikiTiki/LoginTikiTaka - 2.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+     </div>
+    </header>
+<element class="Producto">
+    <section id="Producto">
+      <div class="galeria">
+         <button class="flecha izquierda" id="anterior">&#10094;</button>
+         <img id="imagenPrincipal" src="ImagenesCatalogBalones/BalonChampions.jpg" alt="Balón Champions League">
+         <button class="flecha derecha" id="siguiente"> &#10095; </button>
+         <div class="indicadores">
+            <span class="punto activo"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+         </div>
+      </div>
+         <div class="inf" style="padding-top: 0;">
+               <div class="heroProducto">
+                  <span class="categoria">
+                     BALÓN OFICIAL UEFA
+                  </span>
+                  <h1>
+                     Balón Champions League 25/26
+                  </h1>
+                  <p class="subtitulo">
+                     UEFA Champions League 2025/2026
+                  </p>
+                  <div class="etiquetas">
+                     <span>⚽ Adidas</span>
+                     <span>⭐ Champions League</span>
+                     <span>✔ Oficial UEFA</span>
+                  </div>
+               </div>
+               <p>Los mejores equipos de Europa se unen bajo las estrellas para luchar por su destino futbolístico. Su construcción sin costuras y su cámara de butilo premium garantizan un rendimiento excepcional bajo la mirada del mundo.</p>
+               <p>El balón oficial de la UEFA Champions League para la fase de liga 2025/2026 de Adidas presenta un diseño artístico inspirado en los relojes astronómicos y los doce signos del zodiaco. Las icónicas estrellas incorporan detalles dorados y azules sobre una base blanca.</p><br>
+               <h2 class="tituloSeccion">
+                  Especificaciones técnicas
+               </h2>
+               <p class="descripcionSeccion">
+                  Características oficiales del Balón Champions League 25/26 para la Temporada 25/26.
+               </p>
+               <div class="especificaciones">
+               <div class="especificacion">
+                  <div class="icono">
+                     📏
+                  </div>
+                  <strong>Tamaño</strong>
+                  <span>N.º 5</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⚖️
+                  </div>
+                  <strong>Peso</strong>
+                  <span>410–450 g</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⭕
+                  </div>
+                  <strong>Circunferencia</strong>
+                  <span>68–70 cm</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🧵
+                  </div>
+                  <strong>Material</strong>
+                  <span>61% poliuretano, 30% poliéster reciclado, 9% rayón</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🔷
+                  </div>
+                  <strong>Número de paneles</strong>
+                  <span>32</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🪡
+                  </div>
+                  <strong>Construcción</strong>
+                  <span>Termosellado sin costuras</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⚽
+                  </div>
+                  <strong>Uso recomendado</strong>
+                  <span>Partidos oficiales y entrenamiento</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🌱
+                  </div>
+                  <strong>Superficies recomendadas</strong>
+                  <span>Césped natural y sintético</span>
+               </div>
+               </div>
+    </section>
+</element>
+    <button id="btnVolver" onclick="Volver()">
+     ←
+    </button>
+
+    <script>
+
+      function Volver(){
+         
+      return window.location.href = "/Tikitaka/balonesTikitaka.html";
+      };
+
+      const principal = document.getElementById("imagenPrincipal");
+
+      const imagenes = [
+         "ImagenesCatalogBalones/BalonChampions.jpg",
+         "ImagenesCatalogBalones/BalonChampions2.jpg",
+         "ImagenesCatalogBalones/BalonChampions3.jpg",
+         "ImagenesCatalogBalones/BalonChampions4.webp"
+      ];
+
+      let indice = 0;
+
+      const imagen = document.getElementById("imagenPrincipal");
+
+      const puntos = document.querySelectorAll(".punto");
+
+      function actualizarGaleria(){
+         imagen.style.opacity = 0;
+         setTimeout(()=>{
+            imagen.src = imagenes[indice];
+            imagen.style.opacity = 1;
+         },180);
+         puntos.forEach(p=>p.classList.remove("activo"));
+         puntos[indice].classList.add("activo");
+      }
+
+      document.getElementById("siguiente").onclick=()=>{
+         indice++;
+         if(indice>=imagenes.length){
+            indice=0;
+         }
+         actualizarGaleria();
+      };
+
+      document.getElementById("anterior").onclick=()=>{
+         indice--;
+         if(indice<0){
+            indice=imagenes.length-1;
+         }
+         actualizarGaleria();
+      };
+
+      puntos.forEach((punto,i)=>{
+         punto.onclick=()=>{
+            indice=i;
+            actualizarGaleria();
+         };
+      });
+    </script>
+  
+</body>
+</html>

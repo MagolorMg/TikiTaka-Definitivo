@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balón Premier League 25/26</title>
+    <link rel="stylesheet" href="Catalogo1.css">
+    <link rel="stylesheet" href="/TikiTaka/InicioTikiTaka.css">
+</head>
+<body>
+    <header>
+     <a href="/TikiTaka/InicioTikiTaka - 2.html">
+         <img src="/TikiTaka/ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+     </a>
+     <h1 class="nombre">Tiki-Taka</h1>
+     <div class="head">
+         <a href="/TikiTaka/InicioTikiTaka - 2.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+         <a href="/TikiTaka/FQA/FQA - 2.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+         <a href="/TikiTaka/Login y registro TikiTiki/LoginTikiTaka - 2.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+     </div>
+    </header>
+<element class="Producto">
+    <section id="Producto">
+      <div class="galeria">
+         <button class="flecha izquierda" id="anterior">&#10094;</button>
+         <img id="imagenPrincipal" src="ImagenesCatalogBalones/BalonPremier.jpg" alt="Balón Premier League">
+         <button class="flecha derecha" id="siguiente"> &#10095; </button>
+         <div class="indicadores">
+            <span class="punto activo"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+         </div>
+      </div>
+         <div class="inf" style="padding-top: 0;">
+               <div class="heroProducto">
+                  <span class="categoria">
+                     BALÓN OFICIAL PREMIER LEAGUE
+                  </span>
+                  <h1>
+                     ORBITA ULTIMATE PL
+                  </h1>
+                  <p class="subtitulo">
+                     Premier League 2025/2026
+                  </p>
+                  <div class="etiquetas">
+                     <span>⚽ PUMA</span>
+                     <span>🏆 Temporada 25/26</span>
+                     <span>✔ FIFA Quality Pro</span>
+                  </div>
+               </div>
+               <p>El PUMA Orbita Ultimate PL es el balón oficial de partido de la Premier League para la temporada 2025/2026. Su diseño de 12 paneles de igual tamaño permite una distribución precisa del peso, manteniendo un equilibrio óptimo durante el juego.</p>
+               <p>Su construcción mediante moldeado de alta frecuencia proporciona una excelente retención de forma, durabilidad y un tacto suave. Además, sus costuras profundas y amplias favorecen la aerodinámica, mientras que su superficie de PU con textura 3D está diseñada para mejorar la durabilidad y el comportamiento del balón.</p><br>
+               <h2 class="tituloSeccion">
+                  Especificaciones técnicas
+               </h2>
+               <p class="descripcionSeccion">
+                  Características oficiales del balón Orbita Ultimate PL para la Premier League 2025/2026.
+               </p>
+               <div class="especificaciones">
+               <div class="especificacion">
+                  <div class="icono">
+                     📏
+                  </div>
+                  <strong>Tamaño</strong>
+                  <span>N.º 5</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⚖️
+                  </div>
+                  <strong>Peso</strong>
+                  <span>410–450 g</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⭕
+                  </div>
+                  <strong>Circunferencia</strong>
+                  <span>69 cm</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🧵
+                  </div>
+                  <strong>Material exterior</strong>
+                  <span>PU de 1,2 mm con textura 3D</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🔷
+                  </div>
+                  <strong>Número de paneles</strong>
+                  <span>12 paneles de igual tamaño y forma</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🪡
+                  </div>
+                  <strong>Construcción</strong>
+                  <span>Moldeado de alta frecuencia</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🌱
+                  </div>
+                  <strong>Uso recomendado</strong>
+                  <span>Entrenamiento, Partidos oficiales de Bundesliga y Bundesliga 2</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     💨
+                  </div>
+                  <strong>Cámara y válvula</strong>
+                  <span>Cámara de goma + válvula PAL (PUMA Air Lock)</span>
+               </div>
+               </div>
+    </section>
+</element>
+    <button id="btnVolver" onclick="Volver()">
+     ←
+    </button>
+
+    <script>
+
+      function Volver(){
+         
+      return window.location.href = "/Tikitaka/balonesTikitaka.html";
+      };
+
+      const principal = document.getElementById("imagenPrincipal");
+
+      const imagenes = [
+         "ImagenesCatalogBalones/BalonPremier.jpg",
+         "ImagenesCatalogBalones/BalonPremier2.webp",
+         "ImagenesCatalogBalones/BalonPremier3.jpg",
+         "ImagenesCatalogBalones/BalonPremier4.jpg"
+      ];
+
+      let indice = 0;
+
+      const imagen = document.getElementById("imagenPrincipal");
+
+      const puntos = document.querySelectorAll(".punto");
+
+      function actualizarGaleria(){
+         imagen.style.opacity = 0;
+         setTimeout(()=>{
+            imagen.src = imagenes[indice];
+            imagen.style.opacity = 1;
+         },180);
+         puntos.forEach(p=>p.classList.remove("activo"));
+         puntos[indice].classList.add("activo");
+      }
+
+      document.getElementById("siguiente").onclick=()=>{
+         indice++;
+         if(indice>=imagenes.length){
+            indice=0;
+         }
+         actualizarGaleria();
+      };
+
+      document.getElementById("anterior").onclick=()=>{
+         indice--;
+         if(indice<0){
+            indice=imagenes.length-1;
+         }
+         actualizarGaleria();
+      };
+
+      puntos.forEach((punto,i)=>{
+         punto.onclick=()=>{
+            indice=i;
+            actualizarGaleria();
+         };
+      });
+    </script>
+  
+</body>
+</html>

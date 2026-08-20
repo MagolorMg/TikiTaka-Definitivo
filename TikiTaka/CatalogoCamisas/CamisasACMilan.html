@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camiseta AC Milan 25/26</title>
+    <link rel="stylesheet" href="/TikiTaka/CatalogoBalones/Catalogo1.css">
+    <link rel="stylesheet" href="/TikiTaka/InicioTikiTaka.css">
+</head>
+<body>
+    <header>
+     <a href="/TikiTaka/InicioTikiTaka - 2.html">
+         <img src="/TikiTaka/ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+     </a>
+     <h1 class="nombre">Tiki-Taka</h1>
+     <div class="head">
+         <a href="/TikiTaka/InicioTikiTaka - 2.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+         <a href="/TikiTaka/FQA/FQA - 2.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+         <a href="/TikiTaka/Login y registro TikiTiki/LoginTikiTaka - 2.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+     </div>
+    </header>
+<element class="Producto">
+    <section id="Producto">
+      <div class="galeria">
+         <button class="flecha izquierda" id="anterior">&#10094;</button>
+         <img id="imagenPrincipal" src="ImagenesCatalogCamisas/CamisaACMilan.png" alt="Camiseta AC Milan">
+         <button class="flecha derecha" id="siguiente"> &#10095; </button>
+         <div class="indicadores">
+            <span class="punto activo"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+         </div>
+      </div>
+         <div class="inf" style="padding-top: 0;">
+               <div class="heroProducto">
+                  <span class="categoria">
+                     CAMISETA OFICIAL AC MILAN
+                  </span>
+                  <h1>
+                     AC MILAN HOME 25/26
+                  </h1>
+                  <p class="subtitulo">
+                     Primera equipación 2025/2026
+                  </p>
+                  <div class="etiquetas">
+                     <span>⚽ Adidas</span>
+                     <span>🔴⚫ AC Milan</span>
+                     <span>✔ Camiseta Authentic</span>
+                  </div>
+               </div>
+               <p>La camiseta local del AC Milan para la temporada 2025/2026 recupera elementos clásicos de la identidad rossonera, combinando las tradicionales franjas rojas y negras con una interpretación moderna del diseño del club. La equipación representa la historia y el carácter del AC Milan, manteniendo una estética reconocible tanto dentro como fuera del terreno de juego.</p>
+               <p>Diseñada para ofrecer un rendimiento óptimo durante los partidos, la versión Authentic incorpora materiales ligeros y transpirables junto con la tecnología adidas HEAT.RDY, que ayuda a mantener el cuerpo fresco y seco durante la actividad física. Su construcción está pensada para proporcionar comodidad, libertad de movimiento y un ajuste similar al utilizado por los jugadores profesionales.</p><br>
+               <h2 class="tituloSeccion">
+                  Especificaciones técnicas
+               </h2>
+               <p class="descripcionSeccion">
+                  Características oficiales de la camiseta AC Milan local 25/26.
+               </p>
+               <div class="especificaciones">
+               <div class="especificacion">
+                  <div class="icono">
+                     👕
+                  </div>
+                  <strong>Tipo de camiseta</strong>
+                  <span>Authentic</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🎨
+                  </div>
+                  <strong>Colores principales</strong>
+                  <span>Rojo y negro</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🧵
+                  </div>
+                  <strong>Material</strong>
+                  <span>100 % poliéster reciclado</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     📐
+                  </div>
+                  <strong>Corte</strong>
+                  <span>Slim fit</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🔵
+                  </div>
+                  <strong>Cuello</strong>
+                  <span>Cuello redondo</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     💨
+                  </div>
+                  <strong>Tecnología</strong>
+                  <span>adidas HEAT.RDY</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🛡️
+                  </div>
+                  <strong>Escudo</strong>
+                  <span>Escudo del AC Milan aplicado/termotransferido</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🌬️
+                  </div>
+                  <strong>Ventilación</strong>
+                  <span>Paneles/inserciones de malla para favorecer la transpirabilidad</span>
+               </div>
+               </div>
+    </section>
+</element>
+    <button id="btnVolver" onclick="Volver()">
+     ←
+    </button>
+
+    <script>
+
+      function Volver(){
+         
+      return window.location.href = "/Tikitaka/camisasTikitaka.html";
+      };
+
+      const principal = document.getElementById("imagenPrincipal");
+
+      const imagenes = [
+         "ImagenesCatalogCamisas/CamisaACMilan.png",
+         "ImagenesCatalogCamisas/CamisaACMilan2.jpg",
+         "ImagenesCatalogCamisas/CamisaACMilan3.jpg",
+         "ImagenesCatalogCamisas/CamisaACMilan4.jpg"
+      ];
+
+      let indice = 0;
+
+      const imagen = document.getElementById("imagenPrincipal");
+
+      const puntos = document.querySelectorAll(".punto");
+
+      function actualizarGaleria(){
+         imagen.style.opacity = 0;
+         setTimeout(()=>{
+            imagen.src = imagenes[indice];
+            imagen.style.opacity = 1;
+         },180);
+         puntos.forEach(p=>p.classList.remove("activo"));
+         puntos[indice].classList.add("activo");
+      }
+
+      document.getElementById("siguiente").onclick=()=>{
+         indice++;
+         if(indice>=imagenes.length){
+            indice=0;
+         }
+         actualizarGaleria();
+      };
+
+      document.getElementById("anterior").onclick=()=>{
+         indice--;
+         if(indice<0){
+            indice=imagenes.length-1;
+         }
+         actualizarGaleria();
+      };
+
+      puntos.forEach((punto,i)=>{
+         punto.onclick=()=>{
+            indice=i;
+            actualizarGaleria();
+         };
+      });
+    </script>
+  
+</body>
+</html>

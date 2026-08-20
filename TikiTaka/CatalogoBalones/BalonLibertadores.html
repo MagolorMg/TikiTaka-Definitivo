@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balón Libertadores 2025</title>
+    <link rel="stylesheet" href="Catalogo1.css">
+    <link rel="stylesheet" href="/TikiTaka/InicioTikiTaka.css">
+</head>
+<body>
+    <header>
+     <a href="/TikiTaka/InicioTikiTaka - 2.html">
+         <img src="/TikiTaka/ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+     </a>
+     <h1 class="nombre">Tiki-Taka</h1>
+     <div class="head">
+         <a href="/TikiTaka/InicioTikiTaka - 2.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+         <a href="/TikiTaka/FQA/FQA - 2.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+         <a href="/TikiTaka/Login y registro TikiTiki/LoginTikiTaka - 2.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+     </div>
+    </header>
+<element class="Producto">
+    <section id="Producto">
+      <div class="galeria">
+         <button class="flecha izquierda" id="anterior">&#10094;</button>
+         <img id="imagenPrincipal" src="ImagenesCatalogBalones/BalonLibertadores.jpg" alt="Balón Libertadores">
+         <button class="flecha derecha" id="siguiente"> &#10095; </button>
+         <div class="indicadores">
+            <span class="punto activo"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+         </div>
+      </div>
+         <div class="inf" style="padding-top: 0;">
+               <div class="heroProducto">
+                  <span class="categoria">
+                     BALÓN OFICIAL CONMEBOL LIBERTADORES
+                  </span>
+                  <h1>
+                     CUMBRE CONMEBOL
+                  </h1>
+                  <p class="subtitulo">
+                     CONMEBOL Libertadores 2025
+                  </p>
+                  <div class="etiquetas">
+                     <span>⚽ PUMA</span>
+                     <span>🏆 CONMEBOL Libertadores</span>
+                     <span>✔ FIFA Quality Pro</span>
+                  </div>
+               </div>
+               <p>El PUMA Cumbre CONMEBOL es el balón oficial utilizado en la CONMEBOL Libertadores durante la edición 2025. Fue diseñado específicamente para las principales competiciones de clubes de Sudamérica y cuenta con certificación FIFA Quality Pro, garantizando un alto nivel de rendimiento durante los partidos oficiales.</p>
+               <p>Su construcción moldeada mediante alta frecuencia proporciona una excelente retención de forma, mayor durabilidad y menor absorción de agua. El balón incorpora 12 paneles de igual superficie y forma, con costuras profundas que favorecen la aerodinámica, además de una superficie de poliuretano de 1,2 mm con textura 3D para mejorar el contacto, la durabilidad y el comportamiento del balón.</p><br>
+               <h2 class="tituloSeccion">
+                  Especificaciones técnicas
+               </h2>
+               <p class="descripcionSeccion">
+                  Características oficiales del balón Cumbre Conmebol para la Conmebol Libertadores edición 2025.
+               </p>
+               <div class="especificaciones">
+               <div class="especificacion">
+                  <div class="icono">
+                     📏
+                  </div>
+                  <strong>Tamaño</strong>
+                  <span>N.º 5</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🧵
+                  </div>
+                  <strong>Material exterior</strong>
+                  <span>PU de 1,2 mm con textura 3D</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🔷
+                  </div>
+                  <strong>Número de paneles</strong>
+                  <span>12 paneles de igual superficie y forma</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🏭
+                  </div>
+                  <strong>Construcción</strong>
+                  <span>Moldeado mediante alta frecuencia</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🪡
+                  </div>
+                  <strong>Costuras</strong>
+                  <span>Costuras profundas para favorecer la aerodinámica</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     💨
+                  </div>
+                  <strong>Cámara y válvula</strong>
+                  <span>Cámara de goma + válvula PAL (PUMA Air Lock)</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     💧
+                  </div>
+                  <strong>Resistencia al agua</strong>
+                  <span>Menor absorción de agua</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ✔️
+                  </div>
+                  <strong>Certificación</strong>
+                  <span>FIFA Quality Pro</span>
+               </div>
+               </div>
+    </section>
+</element>
+    <button id="btnVolver" onclick="Volver()">
+     ←
+    </button>
+
+    <script>
+
+      function Volver(){
+         
+      return window.location.href = "/Tikitaka/balonesTikitaka.html";
+      };
+
+      const principal = document.getElementById("imagenPrincipal");
+
+      const imagenes = [
+         "ImagenesCatalogBalones/BalonLibertadores.jpg",
+         "ImagenesCatalogBalones/BalonLibertadores2.jpg",
+         "ImagenesCatalogBalones/BalonLibertadores3.avif",
+         "ImagenesCatalogBalones/BalonLibertadores4.jpg"
+      ];
+
+      let indice = 0;
+
+      const imagen = document.getElementById("imagenPrincipal");
+
+      const puntos = document.querySelectorAll(".punto");
+
+      function actualizarGaleria(){
+         imagen.style.opacity = 0;
+         setTimeout(()=>{
+            imagen.src = imagenes[indice];
+            imagen.style.opacity = 1;
+         },180);
+         puntos.forEach(p=>p.classList.remove("activo"));
+         puntos[indice].classList.add("activo");
+      }
+
+      document.getElementById("siguiente").onclick=()=>{
+         indice++;
+         if(indice>=imagenes.length){
+            indice=0;
+         }
+         actualizarGaleria();
+      };
+
+      document.getElementById("anterior").onclick=()=>{
+         indice--;
+         if(indice<0){
+            indice=imagenes.length-1;
+         }
+         actualizarGaleria();
+      };
+
+      puntos.forEach((punto,i)=>{
+         punto.onclick=()=>{
+            indice=i;
+            actualizarGaleria();
+         };
+      });
+    </script>
+  
+</body>
+</html>

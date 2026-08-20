@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balón Ligue 1 25/26</title>
+    <link rel="stylesheet" href="Catalogo1.css">
+    <link rel="stylesheet" href="/TikiTaka/InicioTikiTaka.css">
+</head>
+<body>
+    <header>
+     <a href="/TikiTaka/InicioTikiTaka - 2.html">
+         <img src="/TikiTaka/ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+     </a>
+     <h1 class="nombre">Tiki-Taka</h1>
+     <div class="head">
+         <a href="/TikiTaka/InicioTikiTaka - 2.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+         <a href="/TikiTaka/FQA/FQA - 2.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+         <a href="/TikiTaka/Login y registro TikiTiki/LoginTikiTaka - 2.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+     </div>
+    </header>
+<element class="Producto">
+    <section id="Producto">
+      <div class="galeria">
+         <button class="flecha izquierda" id="anterior">&#10094;</button>
+         <img id="imagenPrincipal" src="ImagenesCatalogBalones/BalonLigue1.jpg" alt="Balón Ligue 1">
+         <button class="flecha derecha" id="siguiente"> &#10095; </button>
+         <div class="indicadores">
+            <span class="punto activo"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+         </div>
+      </div>
+         <div class="inf" style="padding-top: 0;">
+               <div class="heroProducto">
+                  <span class="categoria">
+                     BALÓN OFICIAL LIGUE 1
+                  </span>
+                  <h1>
+                     LIGUE 1 MCDONALD'S
+                  </h1>
+                  <p class="subtitulo">
+                     Ligue 1 McDonald's 2025/2026
+                  </p>
+                  <div class="etiquetas">
+                     <span>⚽ Kipsta</span>
+                     <span>🏆 Temporada 25/26</span>
+                     <span>✔ FIFA Quality Pro</span>
+                  </div>
+               </div>
+               <p>El balón oficial de la Ligue 1 McDonald's 2025/2026 es fabricado por Kipsta, la marca de fútbol de Decathlon y proveedor oficial de los balones de la LFP. Su diseño de 12 paneles termosellados está desarrollado para ofrecer una trayectoria estable, buena resistencia y un rendimiento constante durante los partidos.</p>
+               <p>Para la temporada 2025/2026, el balón presenta una nueva identidad visual y una textura exterior menos marcada que busca mejorar el equilibrio entre agarre, control, toma de efecto y estabilidad de trayectoria. Su geometría de 12 paneles, combinada con ranuras y materiales de microfibra, contribuye a un toque preciso y un comportamiento estable en el aire.</p><br>
+               <h2 class="tituloSeccion">
+                  Especificaciones técnicas
+               </h2>
+               <p class="descripcionSeccion">
+                  Características oficiales del balón oficial Ligue 1 McDonald's para la Temporada 25/26.
+               </p>
+               <div class="especificaciones">
+               <div class="especificacion">
+                  <div class="icono">
+                     📏
+                  </div>
+                  <strong>Tamaño</strong>
+                  <span>N.º 5</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⚖️
+                  </div>
+                  <strong>Peso</strong>
+                  <span>420–445 g</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⭕
+                  </div>
+                  <strong>Circunferencia</strong>
+                  <span>68,5–69,5 cm</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🧵
+                  </div>
+                  <strong>Material exterior</strong>
+                  <span>Microfibra con textura optimizada y ranuras</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🔷
+                  </div>
+                  <strong>Número de paneles</strong>
+                  <span>12 paneles</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🪡
+                  </div>
+                  <strong>Construcción</strong>
+                  <span>Termosellado, sin hilos de costura</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🌱
+                  </div>
+                  <strong>Uso recomendado</strong>
+                  <span>Partidos oficiales de Ligue 1 y entrenamiento de alto nivel</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ✔️
+                  </div>
+                  <strong>Certificación</strong>
+                  <span>FIFA Quality Pro</span>
+               </div>
+               </div>
+    </section>
+</element>
+    <button id="btnVolver" onclick="Volver()">
+     ←
+    </button>
+
+    <script>
+
+      function Volver(){
+         
+      return window.location.href = "/Tikitaka/balonesTikitaka.html";
+      };
+
+      const principal = document.getElementById("imagenPrincipal");
+
+      const imagenes = [
+         "ImagenesCatalogBalones/BalonLigue1.jpg",
+         "ImagenesCatalogBalones/BalonLigue12.jpg",
+         "ImagenesCatalogBalones/BalonLigue13.jpg",
+         "ImagenesCatalogBalones/BalonLigue14.jpg"
+      ];
+
+      let indice = 0;
+
+      const imagen = document.getElementById("imagenPrincipal");
+
+      const puntos = document.querySelectorAll(".punto");
+
+      function actualizarGaleria(){
+         imagen.style.opacity = 0;
+         setTimeout(()=>{
+            imagen.src = imagenes[indice];
+            imagen.style.opacity = 1;
+         },180);
+         puntos.forEach(p=>p.classList.remove("activo"));
+         puntos[indice].classList.add("activo");
+      }
+
+      document.getElementById("siguiente").onclick=()=>{
+         indice++;
+         if(indice>=imagenes.length){
+            indice=0;
+         }
+         actualizarGaleria();
+      };
+
+      document.getElementById("anterior").onclick=()=>{
+         indice--;
+         if(indice<0){
+            indice=imagenes.length-1;
+         }
+         actualizarGaleria();
+      };
+
+      puntos.forEach((punto,i)=>{
+         punto.onclick=()=>{
+            indice=i;
+            actualizarGaleria();
+         };
+      });
+    </script>
+  
+</body>
+</html>

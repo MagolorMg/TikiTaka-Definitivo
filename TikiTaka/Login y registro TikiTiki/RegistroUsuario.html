@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Tiki-Taka</title>
+    <link rel="stylesheet" href="RegistroUsuario.css">
+    <link rel="stylesheet" href="/TikiTaka/InicioTikiTaka.css">
+</head>
+<body>
+    <header>
+        <a href="/TikiTaka/InicioTikiTaka.html">
+            <img src="/TikiTaka/ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+        </a>
+        <h1>Tiki-Taka</h1>
+        <div class="head">
+            <a href="/TikiTaka/InicioTikiTaka.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+            <a href="/TikiTaka/FQA/FQA.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+            <a href="LoginTikiTaka.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+        </div>
+     </header>
+    <main>
+        <section class="registro-card" aria-labelledby="titulo-registro">
+            <div class="accent"></div>
+            <div class="heading">
+                <h1 id="titulo-registro">
+                    Crear cuenta
+                </h1>
+            </div>
+            <form
+                id="registroForm"
+                onsubmit="event.preventDefault(); registro();"
+                novalidate>
+                <div class="input-group">
+                    <label for="mail">
+                        Correo electrónico
+                    </label>
+                    <div class="input-box">
+                        <input
+                            type="email"
+                            id="mail"
+                            name="mail"
+                            placeholder="correo@gmail.com"
+                            autocomplete="email"
+                            required>
+                        <span class="input-icon" aria-hidden="true">
+                            ✉
+                        </span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="contra">
+                        Contraseña
+                    </label>
+                    <div class="input-box">
+                        <input
+                            type="password"
+                            id="contra"
+                            name="contra"
+                            placeholder="Crea una contraseña"
+                            autocomplete="new-password"
+                            required>
+                        <span class="input-icon" aria-hidden="true">
+                            🔒
+                        </span>
+                    </div>
+                </div>
+                <button
+                    type="submit"
+                    id="boton"
+                    class="btn-principal">
+                    Crear cuenta
+                </button>
+                <div class="register-link">
+                    <p>
+                        ¿Ya tienes una cuenta?
+                        <a href="LoginTikiTaka.html">
+                            Inicia sesión
+                        </a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="RegistroyLogin.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camiseta Real Madrid 25/26</title>
+    <link rel="stylesheet" href="/TikiTaka/CatalogoBalones/Catalogo1.css">
+    <link rel="stylesheet" href="/TikiTaka/InicioTikiTaka.css">
+</head>
+<body>
+    <header>
+     <a href="/TikiTaka/InicioTikiTaka - 2.html">
+         <img src="/TikiTaka/ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+     </a>
+     <h1 class="nombre">Tiki-Taka</h1>
+     <div class="head">
+         <a href="/TikiTaka/InicioTikiTaka - 2.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+         <a href="/TikiTaka/FQA/FQA - 2.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+         <a href="/TikiTaka/Login y registro TikiTiki/LoginTikiTaka - 2.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+     </div>
+    </header>
+<element class="Producto">
+    <section id="Producto">
+      <div class="galeria">
+         <button class="flecha izquierda" id="anterior">&#10094;</button>
+         <img id="imagenPrincipal" src="ImagenesCatalogCamisas/CamisetaReal.webp" alt="Camiseta Real Madrid">
+         <button class="flecha derecha" id="siguiente"> &#10095; </button>
+         <div class="indicadores">
+            <span class="punto activo"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+         </div>
+      </div>
+         <div class="inf" style="padding-top: 0;">
+               <div class="heroProducto">
+                  <span class="categoria">
+                     CAMISETA OFICIAL REAL MADRID
+                  </span>
+                  <h1>
+                     REAL MADRID HOME 25/26
+                  </h1>
+                  <p class="subtitulo">
+                     Primera equipación 2025/2026
+                  </p>
+                  <div class="etiquetas">
+                     <span>⚽ Adidas</span>
+                     <span>⚪ Real Madrid</span>
+                     <span>✔ Camiseta Authentic</span>
+                  </div>
+               </div>
+               <p>La camiseta local del Real Madrid para la temporada 2025/2026 combina la tradición del club con una reinterpretación moderna de la historia del Santiago Bernabéu. Su diseño blanco incorpora detalles inspirados en las diferentes etapas del estadio, creando una apariencia elegante y minimalista que representa la identidad del Real Madrid.</p>
+               <p>Diseñada para ofrecer comodidad y rendimiento durante los partidos, la camiseta utiliza materiales ligeros y transpirables junto con tecnología adidas orientada a favorecer la ventilación. El modelo Authentic presenta un corte slim, cuello redondo y un escudo del Real Madrid aplicado mediante transferencia térmica, reproduciendo las características de la equipación utilizada por los jugadores.</p><br>
+               <h2 class="tituloSeccion">
+                  Especificaciones técnicas
+               </h2>
+               <p class="descripcionSeccion">
+                  Características oficiales de la camiseta Real Madrid local 25/26.
+               </p>
+               <div class="especificaciones">
+               <div class="especificacion">
+                  <div class="icono">
+                     👕
+                  </div>
+                  <strong>Tipo de camiseta</strong>
+                  <span>Authentic</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🎨
+                  </div>
+                  <strong>Color principal</strong>
+                  <span>Blanco</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🧵
+                  </div>
+                  <strong>Material</strong>
+                  <span>100 % poliéster reciclado</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     📐
+                  </div>
+                  <strong>Corte</strong>
+                  <span>Slim fit</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🔵
+                  </div>
+                  <strong>Cuello</strong>
+                  <span>Cuello redondo</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     💨
+                  </div>
+                  <strong>Tecnología</strong>
+                  <span>Tecnología adidas para favorecer la ventilación y transpirabilidad</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🛡️
+                  </div>
+                  <strong>Escudo</strong>
+                  <span>Escudo del Real Madrid aplicado mediante transferencia térmica</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ™️
+                  </div>
+                  <strong>Marca</strong>
+                  <span>Adidas</span>
+               </div>
+               </div>
+    </section>
+</element>
+    <button id="btnVolver" onclick="Volver()">
+     ←
+    </button>
+
+    <script>
+
+      function Volver(){
+         
+      return window.location.href = "/Tikitaka/camisasTikitaka.html";
+      };
+
+      const principal = document.getElementById("imagenPrincipal");
+
+      const imagenes = [
+         "ImagenesCatalogCamisas/CamisetaReal.webp",
+         "ImagenesCatalogCamisas/CamisetaReal2.jpg",
+         "ImagenesCatalogCamisas/CamisetaReal3.jpg",
+         "ImagenesCatalogCamisas/CamisetaReal4.jpg"
+      ];
+
+      let indice = 0;
+
+      const imagen = document.getElementById("imagenPrincipal");
+
+      const puntos = document.querySelectorAll(".punto");
+
+      function actualizarGaleria(){
+         imagen.style.opacity = 0;
+         setTimeout(()=>{
+            imagen.src = imagenes[indice];
+            imagen.style.opacity = 1;
+         },180);
+         puntos.forEach(p=>p.classList.remove("activo"));
+         puntos[indice].classList.add("activo");
+      }
+
+      document.getElementById("siguiente").onclick=()=>{
+         indice++;
+         if(indice>=imagenes.length){
+            indice=0;
+         }
+         actualizarGaleria();
+      };
+
+      document.getElementById("anterior").onclick=()=>{
+         indice--;
+         if(indice<0){
+            indice=imagenes.length-1;
+         }
+         actualizarGaleria();
+      };
+
+      puntos.forEach((punto,i)=>{
+         punto.onclick=()=>{
+            indice=i;
+            actualizarGaleria();
+         };
+      });
+    </script>
+  
+</body>
+</html>

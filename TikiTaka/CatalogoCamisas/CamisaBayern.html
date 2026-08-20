@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camiseta Bayern Munich 25/26</title>
+    <link rel="stylesheet" href="/TikiTaka/CatalogoBalones/Catalogo1.css">
+    <link rel="stylesheet" href="/TikiTaka/InicioTikiTaka.css">
+</head>
+<body>
+    <header>
+     <a href="/TikiTaka/InicioTikiTaka - 2.html">
+         <img src="/TikiTaka/ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+     </a>
+     <h1 class="nombre">Tiki-Taka</h1>
+     <div class="head">
+         <a href="/TikiTaka/InicioTikiTaka - 2.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+         <a href="/TikiTaka/FQA/FQA - 2.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+         <a href="/TikiTaka/Login y registro TikiTiki/LoginTikiTaka - 2.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+     </div>
+    </header>
+<element class="Producto">
+    <section id="Producto">
+      <div class="galeria">
+         <button class="flecha izquierda" id="anterior">&#10094;</button>
+         <img id="imagenPrincipal" src="ImagenesCatalogCamisas/CamisaBayern.png" alt="Camiseta Bayern Munich">
+         <button class="flecha derecha" id="siguiente"> &#10095; </button>
+         <div class="indicadores">
+            <span class="punto activo"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+         </div>
+      </div>
+         <div class="inf" style="padding-top: 0;">
+               <div class="heroProducto">
+                  <span class="categoria">
+                     CAMISETA OFICIAL BAYERN MÚNICH
+                  </span>
+                  <h1>
+                     BAYERN MÜNCHEN HOME 25/26
+                  </h1>
+                  <p class="subtitulo">
+                     Primera equipación 2025/2026
+                  </p>
+                  <div class="etiquetas">
+                     <span>⚽ Adidas</span>
+                     <span>🔴 Bayern Múnich</span>
+                     <span>✔ Camiseta Authentic</span>
+                  </div>
+               </div>
+               <p>La camiseta local del Bayern Múnich para la temporada 2025/2026 mantiene el tradicional color rojo que identifica al club, incorporando una interpretación moderna de su histórica identidad. El diseño está inspirado en la cultura y la tradición del Bayern, con el rojo como protagonista y detalles que resaltan el carácter del club.</p>
+               <p>La versión Authentic está diseñada para el rendimiento de los jugadores y combina una construcción ligera con tecnologías de adidas orientadas a proporcionar comodidad y ventilación durante la actividad deportiva. Su diseño mantiene la apariencia de la equipación utilizada por el primer equipo, ofreciendo un ajuste y una construcción pensados para el fútbol de alto nivel.</p><br>
+               <h2 class="tituloSeccion">
+                  Especificaciones técnicas
+               </h2>
+               <p class="descripcionSeccion">
+                  Características oficiales de la camiseta Bayern Munich local 25/26.
+               </p>
+               <div class="especificaciones">
+               <div class="especificacion">
+                  <div class="icono">
+                     👕
+                  </div>
+                  <strong>Tipo de camiseta</strong>
+                  <span>Authentic / Match</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🎨
+                  </div>
+                  <strong>Color principal</strong>
+                  <span>Rojo</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🧵
+                  </div>
+                  <strong>Fabricante</strong>
+                  <span>Adidas</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     📐
+                  </div>
+                  <strong>Tipo de corte</strong>
+                  <span>Authentic / corte de rendimiento</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     👔
+                  </div>
+                  <strong>Diseño del cuello</strong>
+                  <span>Cuello de camiseta</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     📅
+                  </div>
+                  <strong>Temporada</strong>
+                  <span>2025/2026</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🛡️
+                  </div>
+                  <strong>Escudo</strong>
+                  <span>Escudo del FC Bayern München</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ™️
+                  </div>
+                  <strong>Marca</strong>
+                  <span>Adidas</span>
+               </div>
+               </div>
+    </section>
+</element>
+    <button id="btnVolver" onclick="Volver()">
+     ←
+    </button>
+
+    <script>
+
+      function Volver(){
+         
+      return window.location.href = "/Tikitaka/camisasTikitaka.html";
+      };
+
+      const principal = document.getElementById("imagenPrincipal");
+
+      const imagenes = [
+         "ImagenesCatalogCamisas/CamisaBayern.png",
+         "ImagenesCatalogCamisas/CamisaBayern2.jpg",
+         "ImagenesCatalogCamisas/CamisaBayern3.jpg",
+         "ImagenesCatalogCamisas/CamisaBayern4.jpg"
+      ];
+
+      let indice = 0;
+
+      const imagen = document.getElementById("imagenPrincipal");
+
+      const puntos = document.querySelectorAll(".punto");
+
+      function actualizarGaleria(){
+         imagen.style.opacity = 0;
+         setTimeout(()=>{
+            imagen.src = imagenes[indice];
+            imagen.style.opacity = 1;
+         },180);
+         puntos.forEach(p=>p.classList.remove("activo"));
+         puntos[indice].classList.add("activo");
+      }
+
+      document.getElementById("siguiente").onclick=()=>{
+         indice++;
+         if(indice>=imagenes.length){
+            indice=0;
+         }
+         actualizarGaleria();
+      };
+
+      document.getElementById("anterior").onclick=()=>{
+         indice--;
+         if(indice<0){
+            indice=imagenes.length-1;
+         }
+         actualizarGaleria();
+      };
+
+      puntos.forEach((punto,i)=>{
+         punto.onclick=()=>{
+            indice=i;
+            actualizarGaleria();
+         };
+      });
+    </script>
+  
+</body>
+</html>

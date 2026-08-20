@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balón Europa League 23/24</title>
+    <link rel="stylesheet" href="Catalogo1.css">
+    <link rel="stylesheet" href="/TikiTaka/InicioTikiTaka.css">
+</head>
+<body>
+    <header>
+     <a href="/TikiTaka/InicioTikiTaka - 2.html">
+         <img src="/TikiTaka/ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+     </a>
+     <h1 class="nombre">Tiki-Taka</h1>
+     <div class="head">
+         <a href="/TikiTaka/InicioTikiTaka - 2.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+         <a href="/TikiTaka/FQA/FQA - 2.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+         <a href="/TikiTaka/Login y registro TikiTiki/LoginTikiTaka - 2.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+     </div>
+    </header>
+<element class="Producto">
+    <section id="Producto">
+      <div class="galeria">
+         <button class="flecha izquierda" id="anterior">&#10094;</button>
+         <img id="imagenPrincipal" src="ImagenesCatalogBalones/BalonEuropa4.webp" alt="Balón Europa League">
+         <button class="flecha derecha" id="siguiente"> &#10095; </button>
+         <div class="indicadores">
+            <span class="punto activo"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+         </div>
+      </div>
+         <div class="inf" style="padding-top: 0;">
+               <div class="heroProducto">
+                  <span class="categoria">
+                     BALÓN OFICIAL UEFA EUROPA LEAGUE
+                  </span>
+                  <h1>
+                     EUROPA LEAGUE 23/24
+                  </h1>
+                  <p class="subtitulo">
+                     UEFA Europa League 2023/2024
+                  </p>
+                  <div class="etiquetas">
+                     <span>⚽ Molten</span>
+                     <span>🏆 Europa League</span>
+                     <span>✔ Balón Oficial UEFA</span>
+                  </div>
+               </div>
+               <p>El balón oficial de la UEFA Europa League 2023/2024 fue desarrollado por Molten para ofrecer un rendimiento preciso y consistente durante los partidos de la competición. Su diseño incorpora la característica onda de energía de la Europa League, que representa el recorrido de los clubes a través del continente.</p>
+               <p>La tecnología ACENTEC de Molten proporciona una cubierta lisa y sin costuras, diseñada para mejorar el control y la precisión de los pases y disparos. Su superficie y textura también favorecen un vuelo estable y reducen la absorción de agua, ayudando al balón a mantener su forma y rendimiento incluso en condiciones meteorológicas adversas.</p><br>
+               <h2 class="tituloSeccion">
+                  Especificaciones técnicas
+               </h2>
+               <p class="descripcionSeccion">
+                  Características oficiales del balón UEFA Europa League para la Temporada 2023/2024.
+               </p>
+               <div class="especificaciones">
+               <div class="especificacion">
+                  <div class="icono">
+                     📏
+                  </div>
+                  <strong>Tamaño</strong>
+                  <span>N.º 5</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⚖️
+                  </div>
+                  <strong>Peso</strong>
+                  <span>410–450 g</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⭕
+                  </div>
+                  <strong>Circunferencia</strong>
+                  <span>68–70 cm</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🧵
+                  </div>
+                  <strong>Superficie exterior</strong>
+                  <span>Cubierta sintética con acabado y textura especial</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🔷
+                  </div>
+                  <strong>Tecnología de construcción</strong>
+                  <span>ACENTEC</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🪡
+                  </div>
+                  <strong>Construcción</strong>
+                  <span>Sin costuras</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⚽
+                  </div>
+                  <strong>Uso recomendado</strong>
+                  <span>Entrenamiento, Partidos oficiales de UEFA Europa League</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     💧
+                  </div>
+                  <strong>Resistencia al agua</strong>
+                  <span>Absorción de agua minimizada</span>
+               </div>
+               </div>
+    </section>
+</element>
+    <button id="btnVolver" onclick="Volver()">
+     ←
+    </button>
+
+    <script>
+
+      function Volver(){
+         
+      return window.location.href = "/Tikitaka/balonesTikitaka.html";
+      };
+
+      const principal = document.getElementById("imagenPrincipal");
+
+      const imagenes = [
+         "ImagenesCatalogBalones/BalonEuropa4.webp",
+         "ImagenesCatalogBalones/BalonEuropa2.webp",
+         "ImagenesCatalogBalones/BalonEuropa3.webp",
+         "ImagenesCatalogBalones/BalonEuropa.jpg"
+      ];
+
+      let indice = 0;
+
+      const imagen = document.getElementById("imagenPrincipal");
+
+      const puntos = document.querySelectorAll(".punto");
+
+      function actualizarGaleria(){
+         imagen.style.opacity = 0;
+         setTimeout(()=>{
+            imagen.src = imagenes[indice];
+            imagen.style.opacity = 1;
+         },180);
+         puntos.forEach(p=>p.classList.remove("activo"));
+         puntos[indice].classList.add("activo");
+      }
+
+      document.getElementById("siguiente").onclick=()=>{
+         indice++;
+         if(indice>=imagenes.length){
+            indice=0;
+         }
+         actualizarGaleria();
+      };
+
+      document.getElementById("anterior").onclick=()=>{
+         indice--;
+         if(indice<0){
+            indice=imagenes.length-1;
+         }
+         actualizarGaleria();
+      };
+
+      puntos.forEach((punto,i)=>{
+         punto.onclick=()=>{
+            indice=i;
+            actualizarGaleria();
+         };
+      });
+    </script>
+  
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adidas Bring Back 90´s Nostalgia Predator</title>
+    <link rel="stylesheet" href="Catalogo1.css">
+    <link rel="stylesheet" href="/TikiTaka/InicioTikiTaka.css">
+</head>
+<body>
+    <header>
+     <a href="/TikiTaka (Final)-2/InicioTikiTaka - 2.html">
+         <img src="/TikiTaka/ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+     </a>
+     <h1 class="nombre">Tiki-Taka</h1>
+     <div class="head">
+         <a href="/TikiTaka/InicioTikiTaka - 2.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+         <a href="/TikiTaka/FQA/FQA - 2.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+         <a href="/TikiTaka/Login y registro TikiTiki/LoginTikiTaka - 2.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+     </div>
+    </header>
+<element class="Producto">
+    <section id="Producto">
+      <div class="galeria">
+         <button class="flecha izquierda" id="anterior">&#10094;</button>
+         <img id="imagenPrincipal" src="ImágenesBotinesDesc/AdidasBringBack90s.jpg" alt="Adidas Bring Back 90s Predator">
+         <button class="flecha derecha" id="siguiente"> &#10095; </button>
+         <div class="indicadores">
+            <span class="punto activo"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+         </div>
+      </div>
+         <div class="inf" style="padding-top: 0;">
+               <div class="heroProducto">
+                  <span class="categoria">
+                     BOTINES DE EDICIÓN ESPECIAL
+                  </span>
+                  <h1>
+                     ADIDAS BRING BACK 90s PREDATOR
+                  </h1>
+                  <p class="subtitulo">
+                     Colección Bring Back 90s
+                  </p>
+                  <div class="etiquetas">
+                     <span>⚽ Adidas</span>
+                     <span>🕹️ Estilo Retro</span>
+                     <span>✔ Edición Especial</span>
+                  </div>
+               </div>
+               <p>La esencia más pura del fútbol clásico regresa para conquistar las canchas modernas con actitud imparable. Su lengüeta doblada y los relieves de goma garantizan una precisión quirúrgica en cada golpeo de balón.</p>
+               <p>Las botas de edición especial de Adidas rinden tributo a la era dorada de los años noventa con un diseño retro deslumbrante. Los detalles icónicos combinan tonos negros, rojos y blancos sobre una estructura de alta tecnología.</p><br>
+               <h2 class="tituloSeccion">
+                  Especificaciones técnicas
+               </h2>
+               <p class="descripcionSeccion">
+                  Características oficiales de los botines Adidas Bring Back 90s Predator.
+               </p>
+               <div class="especificaciones">
+               <div class="especificacion">
+                  <div class="icono">
+                     🏷️
+                  </div>
+                  <strong>Gama</strong>
+                  <span>Especial / Colección Limitada</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⚖️
+                  </div>
+                  <strong>Peso</strong>
+                  <span>216-g</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🎮
+                  </div>
+                  <strong>Estilo de Juego</strong>
+                  <span>Control, Potencia y Efecto</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     👞
+                  </div>
+                  <strong>Capellada</strong>
+                  <span>Piel "Fusionskin" con aletas de goma</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🦶
+                  </div>
+                  <strong>Suela/Terreno</strong>
+                  <span>Controlframe 2.0 / FG (Césped natural)</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     📐
+                  </div>
+                  <strong>Horma</strong>
+                  <span>Clásica y Ligeramente Ancha</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🎯
+                  </div>
+                  <strong>Tipo de Ajuste</strong>
+                  <span>Cordones tradicionales</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🔩
+                  </div>
+                  <strong>Configuración de Tacos</strong>
+                  <span>Triangulares y laminados</span>
+               </div>
+               </div>
+    </section>
+</element>
+    <button id="btnVolver" onclick="Volver()">
+     ←
+    </button>
+
+    <script>
+
+      function Volver(){
+         
+      return window.location.href = "/Tikitaka/botinesTikitaka.html";
+      };
+
+      const principal = document.getElementById("imagenPrincipal");
+
+      const imagenes = [
+         "ImágenesBotinesDesc/AdidasBringBack90s.jpg",
+         "ImágenesBotinesDesc/AdidasBringBack90s2.jpg",
+         "ImágenesBotinesDesc/AdidasBringBack90s3.jpg",
+         "ImágenesBotinesDesc/AdidasBringBack90s4.jpg"
+      ];
+
+      let indice = 0;
+
+      const imagen = document.getElementById("imagenPrincipal");
+
+      const puntos = document.querySelectorAll(".punto");
+
+      function actualizarGaleria(){
+         imagen.style.opacity = 0;
+         setTimeout(()=>{
+            imagen.src = imagenes[indice];
+            imagen.style.opacity = 1;
+         },180);
+         puntos.forEach(p=>p.classList.remove("activo"));
+         puntos[indice].classList.add("activo");
+      }
+
+      document.getElementById("siguiente").onclick=()=>{
+         indice++;
+         if(indice>=imagenes.length){
+            indice=0;
+         }
+         actualizarGaleria();
+      };
+
+      document.getElementById("anterior").onclick=()=>{
+         indice--;
+         if(indice<0){
+            indice=imagenes.length-1;
+         }
+         actualizarGaleria();
+      };
+
+      puntos.forEach((punto,i)=>{
+         punto.onclick=()=>{
+            indice=i;
+            actualizarGaleria();
+         };
+      });
+    </script>
+  
+</body>
+</html>

@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.mockup-container{
+    font-family: 'Inter', sans-serif;
+}
+
+.about-hero {
+    background-color: #f9fbf9;
+    padding: 40px;
+}
+
+.about-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.hero-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-image-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.team-section {
+    padding: 50px 40px 20px 40px;
+}
+
+.team-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.section-desc {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.history-section {
+    padding: 20px 40px 40px 40px;
+}
+
+.history-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.company-date {
+    color: #393838;
+    font-size: 0.85rem;
+    font-weight: normal;
+}
+
+.main-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #ffffff;
+}
+
+.footer-left h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.footer-left p {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    
+    gap: 15px;
+}
+
+.footer-links-container {
+  width: 100%;
+  max-width: flex;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-col h4 {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+.footer-col a {
+    display: block;
+    text-decoration: none;
+    color: #666;
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+  .faq-container {
+    flex-direction: column;
+  }
+  .faq-left {
+    flex: none;
+    width: 100%;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

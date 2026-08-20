@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Login Tiki-Taka</title>
+    <link
+        rel="stylesheet"
+        href="StyleLogin.css">
+    <link
+        rel="stylesheet"
+        href="/TikiTaka/InicioTikiTaka.css">
+</head>
+<body>
+    <header>
+        <a href="InicioTikiTaka.html">
+            <img src="/TikiTaka/ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+        </a>
+        <h1>Tiki-Taka</h1>
+        <div class="head">
+            <a href="/TikiTaka/InicioTikiTaka.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+            <a href="/TikiTaka/FQA/FQA.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+            <a href="LoginTikiTaka.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <form
+                onsubmit="event.preventDefault(); login()">
+                <h1>
+                    Iniciar Sesión
+                </h1>
+                <div class="input-box">
+                    <input
+                        type="email"
+                        id="mail"
+                        placeholder="Correo electrónico"
+                        autocomplete="email"
+                        required>
+                    <span class="input-icon" aria-hidden="true">
+                            ✉
+                        </span>
+                    <i class="bx bx-user-circle"></i>
+                </div>
+                <div class="input-box">
+                    <input
+                        type="password"
+                        id="contra"
+                        placeholder="Contraseña"
+                        autocomplete="current-password"
+                        required>
+                    <span class="input-icon" aria-hidden="true">
+                            🔒
+                    </span>
+                    <i class="bx bx-lock"></i>
+                </div>
+                <button
+                    type="submit"
+                    class="boton">
+                    Continuar
+                </button>
+                <div class="register-link">
+                    <p>
+                        ¿No tienes una cuenta?
+                        <a href="RegistroUsuario.html">
+                            Regístrate
+                        </a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="RegistroyLogin.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiki-Taka Inicio</title>
+    <link rel="stylesheet" href="InicioTikiTaka.css">
+</head>
+ 
+<body>
+    <header>
+     <a href="InicioTikiTaka.html">
+         <img src="ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+     </a>
+     <h1>Tiki-Taka</h1>
+     <div class="head">
+         <a href="InicioTikiTaka.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+         <a href="FQA/FQA.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+         <a href="Login y registro TikiTiki/LoginTikiTaka.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+     </div>
+    </header>
+
+   <div class="Hero">
+     <div class="frase frase-superior">
+         UNA Vida
+     </div>
+     <div class="frase frase-izquierda">
+         UN Partido
+     </div>
+     <div class="ImagenInicial">
+         <img src="ImagenesHome/ImagenInicial.jpg" alt="Foto de inicio">
+     </div>
+     <div class="frase frase-derecha">
+         UN Resultado
+     </div>
+     <div class="frase frase-inferior">
+         UN Catálogo
+     </div>
+    </div>
+
+    <div class="FraseMotivacional2">
+         <p>El mejor y mayor catálogo sobre merchandising de futbol en El Salvador</p>
+    </div>
+    <br><br><br><br><br>
+
+    <section class="ImgsCatalog">
+        <div class="Img1">
+            <div class="contenedorImagenHome">
+                <img src="ImagenesHome/Camisas2.jpg" alt="Foto de Camisas" width="450px" onclick="alerta()">
+            </div>
+            <div class="contenido">
+                <h2>Camisetas</h2>
+                <p id="texto1">Que mejor manera de vivir apasionadamente el futbol que llevando la camiseta de tu club favorito</p>
+            </div>
+        </div>
+
+        <div class="Img1">
+            <div class="contenedorImagenHome">
+                <img src="ImagenesHome/Trionda_cover.jpg" alt="Foto de Balon" width="450px" onclick="alerta()">
+            </div>
+            <div class="contenido">
+                <h2>Balones</h2>
+                <p id="texto1">Todos los balones de las mejores competiciones solo para los mejores</p>
+            </div>
+
+        </div>
+        <div class="Img1">
+            <div class="contenedorImagenHome">
+                <img src="ImagenesHome/nike-showtime-pack (9).jpg" alt="Foto de Botines" width="450px" onclick="alerta()">
+            </div>
+            <div class="contenido">
+                <h2>Botines</h2>
+                <p id="texto1">Los mejores y mas usados botines, los mejores amigos de los balones</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="InicioTikiTaka.html" class="logo"><div class="logo-box">⚽</div><span>Tiki-Taka</span></a>
+                    <p>Tu catálogo de merchandising de fútbol de confianza</p>
+                   <div class="socials">
+                        <div class="social">
+                            <a href="">
+                                <img src="/TikiTaka/ImagenesHome/Instagram-Logo.png">
+                            </a>
+                        </div>
+                        <div class="social">
+                            <a href="">
+                                <img src="/TikiTaka/ImagenesHome/X-Logo.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Herramientas</h4>
+                    <a href="Login y registro TikiTiki/RegistroUsuario.html">Registro Usuario</a>
+                    <a href="Footer/pagina.html">Club Kids</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Conócenos</h4>
+                    <a href="Footer/Blog.html">Blog</a>
+                    <a href="Acerca de Nosotros (html, css y img)/Acerca de Nosotros.html">Origen</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Soporte</h4>
+                    <a href="Footer/ayuda.html">Contacto</a>
+                    <a href="FQA/FQA.html">Ayuda</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="btnArriba" onclick="volverArriba()">
+     ↑
+    </button>
+    <script>
+
+     const boton = document.getElementById("btnArriba");
+
+     window.onscroll = function(){
+     if(document.documentElement.scrollTop > 300){
+        boton.style.display = "block";
+     }else{
+        boton.style.display = "none";
+     }
+     }
+     function volverArriba(){
+     window.scrollTo({
+        top:0,
+        behavior:"smooth"
+     });
+     }
+
+     function alerta() {
+        alert("Para acceder a nuestro catálogo ¡Inicia Sesión!")
+     }
+    </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camiseta Barcelona 25/26</title>
+    <link rel="stylesheet" href="/TikiTaka/CatalogoBalones/Catalogo1.css">
+    <link rel="stylesheet" href="/TikiTaka/InicioTikiTaka.css">
+</head>
+<body>
+    <header>
+     <a href="/TikiTaka/InicioTikiTaka - 2.html">
+         <img src="/TikiTaka/ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+     </a>
+     <h1 class="nombre">Tiki-Taka</h1>
+     <div class="head">
+         <a href="/TikiTaka/InicioTikiTaka - 2.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+         <a href="/TikiTaka/FQA/FQA - 2.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+         <a href="/TikiTaka/Login y registro TikiTiki/LoginTikiTaka - 2.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+     </div>
+    </header>
+<element class="Producto">
+    <section id="Producto">
+      <div class="galeria">
+         <button class="flecha izquierda" id="anterior">&#10094;</button>
+         <img id="imagenPrincipal" src="ImagenesCatalogCamisas/CamisaBarcelona.jpg" alt="Camiseta Barcelona">
+         <button class="flecha derecha" id="siguiente"> &#10095; </button>
+         <div class="indicadores">
+            <span class="punto activo"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+         </div>
+      </div>
+         <div class="inf" style="padding-top: 0;">
+               <div class="heroProducto">
+                  <span class="categoria">
+                     CAMISETA OFICIAL FC BARCELONA
+                  </span>
+                  <h1>
+                     FC BARCELONA HOME 25/26
+                  </h1>
+                  <p class="subtitulo">
+                     Primera equipación 2025/2026
+                  </p>
+                  <div class="etiquetas">
+                     <span>⚽ Nike</span>
+                     <span>🔵🔴 FC Barcelona</span>
+                     <span>✔ Camiseta Authentic</span>
+                  </div>
+               </div>
+               <p>La camiseta local del FC Barcelona para la temporada 2025/2026 actualiza uno de los diseños más reconocibles del fútbol. La tradicional identidad Blaugrana combina el azul royal intenso y el rojo noble con gráficos fluidos que aportan sensación de movimiento, mientras que los detalles amarillos hacen referencia a la Senyera y refuerzan la conexión entre el club y Cataluña.</p>
+               <p>La versión Authentic está diseñada para ofrecer un rendimiento similar al utilizado por los jugadores profesionales. Incorpora la tecnología Nike Dri-FIT ADV, que combina un tejido que absorbe la humedad con zonas de transpirabilidad y funciones avanzadas de refrigeración. Su construcción ligera y de secado rápido ayuda a mantener la comodidad durante el juego.</p><br>
+               <h2 class="tituloSeccion">
+                  Especificaciones técnicas
+               </h2>
+               <p class="descripcionSeccion">
+                  Características oficiales de la camiseta FC Barcelona local 25/26.
+               </p>
+               <div class="especificaciones">
+               <div class="especificacion">
+                  <div class="icono">
+                     👕
+                  </div>
+                  <strong>Tipo de camiseta</strong>
+                  <span>Authentic / Match</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🎨
+                  </div>
+                  <strong>Colores principales</strong>
+                  <span>Azul royal intenso y rojo noble</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🧵
+                  </div>
+                  <strong>Material</strong>
+                  <span>100 % poliéster</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     📐
+                  </div>
+                  <strong>Ajuste</strong>
+                  <span>Standard fit</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🌬️
+                  </div>
+                  <strong>Transpirabilidad</strong>
+                  <span>Zonas de transpirabilidad y refrigeración avanzada</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     💨
+                  </div>
+                  <strong>Tecnología</strong>
+                  <span>Nike Dri-FIT ADV</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🛡️
+                  </div>
+                  <strong>Escudo</strong>
+                  <span>Escudo del FC Barcelona de silicona</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🧺
+                  </div>
+                  <strong>Cuidado</strong>
+                  <span>Lavar a máquina</span>
+               </div>
+               </div>
+    </section>
+</element>
+    <button id="btnVolver" onclick="Volver()">
+     ←
+    </button>
+
+    <script>
+
+      function Volver(){
+         
+      return window.location.href = "/Tikitaka/camisasTikitaka.html";
+      };
+
+      const principal = document.getElementById("imagenPrincipal");
+
+      const imagenes = [
+         "ImagenesCatalogCamisas/CamisaBarcelona.jpg",
+         "ImagenesCatalogCamisas/CamisaBarcelona2.jpg",
+         "ImagenesCatalogCamisas/CamisaBarcelona3.jpg",
+         "ImagenesCatalogCamisas/CamisaBarcelona4.jpg"
+      ];
+
+      let indice = 0;
+
+      const imagen = document.getElementById("imagenPrincipal");
+
+      const puntos = document.querySelectorAll(".punto");
+
+      function actualizarGaleria(){
+         imagen.style.opacity = 0;
+         setTimeout(()=>{
+            imagen.src = imagenes[indice];
+            imagen.style.opacity = 1;
+         },180);
+         puntos.forEach(p=>p.classList.remove("activo"));
+         puntos[indice].classList.add("activo");
+      }
+
+      document.getElementById("siguiente").onclick=()=>{
+         indice++;
+         if(indice>=imagenes.length){
+            indice=0;
+         }
+         actualizarGaleria();
+      };
+
+      document.getElementById("anterior").onclick=()=>{
+         indice--;
+         if(indice<0){
+            indice=imagenes.length-1;
+         }
+         actualizarGaleria();
+      };
+
+      puntos.forEach((punto,i)=>{
+         punto.onclick=()=>{
+            indice=i;
+            actualizarGaleria();
+         };
+      });
+    </script>
+  
+</body>
+</html>

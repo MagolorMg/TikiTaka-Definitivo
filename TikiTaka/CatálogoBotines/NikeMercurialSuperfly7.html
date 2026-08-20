@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Mercurial Superfly 7</title>
+    <link rel="stylesheet" href="Catalogo1.css">
+    <link rel="stylesheet" href="/TikiTaka/InicioTikiTaka.css">
+</head>
+<body>
+    <header>
+     <a href="/TikiTaka/InicioTikiTaka - 2.html">
+         <img src="/TikiTaka/ImagenesHome/ImagenLogoRe.png" alt="Logo de la tienda" width="150" height="">
+     </a>
+     <h1 class="nombre">Tiki-Taka</h1>
+     <div class="head">
+         <a href="/TikiTaka/InicioTikiTaka - 2.html" id="head-inicio">🏠<strong>Inicio</strong></a>
+         <a href="/TikiTaka/FQA/FQA - 2.html" id="head-ayuda">❓<strong>Ayuda</strong></a>
+         <a href="/TikiTaka/Login y registro TikiTiki/LoginTikiTaka - 2.html" id="head-sesion">👤<strong>Iniciar Sesión</strong></a>
+     </div>
+    </header>
+<element class="Producto">
+    <section id="Producto">
+      <div class="galeria">
+         <button class="flecha izquierda" id="anterior">&#10094;</button>
+         <img id="imagenPrincipal" src="ImágenesBotinesDesc/NikeMercurialSuperfly7.jpg" alt="Botines Nike Mercurial Superfly 7">
+         <button class="flecha derecha" id="siguiente"> &#10095; </button>
+         <div class="indicadores">
+            <span class="punto activo"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+         </div>
+      </div>
+         <div class="inf" style="padding-top: 0;">
+               <div class="heroProducto">
+                  <span class="categoria">
+                     BOTINES DE VELOCIDAD
+                  </span>
+                  <h1>
+                     NIKE MERCURIAL SUPERFLY 7
+                  </h1>
+                  <p class="subtitulo">
+                     Velocidad y agilidad
+                  </p>
+                  <div class="etiquetas">
+                     <span>⚽ Nike</span>
+                     <span>⚡ Velocidad</span>
+                     <span>✔ Mercurial</span>
+                  </div>
+               </div>
+               <p>La ingeniería de máxima velocidad se combina con un ajuste perfecto para dominar el juego dinámico. Su cuello Dynamic Fit y la textura Flyknit de 360 grados garantizan una respuesta inmediata en cada cambio de ritmo.</p>
+               <p>Las botas de alto nivel de Nike destacan por su propuesta visual audaz y su estructura ligera de última generación. La superficie sintética incorpora un acabado brillante y el logotipo Swoosh sobre una base llamativa.</p><br>
+               <h2 class="tituloSeccion">
+                  Especificaciones técnicas
+               </h2>
+               <p class="descripcionSeccion">
+                  Características técnicas de los botines Nike Mercurial Superfly 7.
+               </p>
+               <div class="especificaciones">
+               <div class="especificacion">
+                  <div class="icono">
+                     🏷️
+                  </div>
+                  <strong>Gama</strong>
+                  <span>Alta profesional (Élite)</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     ⚖️
+                  </div>
+                  <strong>Peso</strong>
+                  <span>194-g</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🎮
+                  </div>
+                  <strong>Estilo de juego</strong>
+                  <span>Velocidad extrema y aceleración vertical</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     👞
+                  </div>
+                  <strong>Capellada</strong>
+                  <span>Hilo <em>Flyknit</em> con capa <em>NikeSkin y <em>ACC</em></em></span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🦶
+                  </div>
+                  <strong>Suela/Terreno</strong>
+                  <span>Placa bífida <em>Nike Aerotrak</em> / FG (Césped natural)</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     📐
+                  </div>
+                  <strong>Horma</strong>
+                  <span>Muy estrecha y de perfil bajo</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🎯
+                  </div>
+                  <strong>Tipo de ajuste</strong>
+                  <span>Cuello alto <em>Dynamic Fit Collar</em> con cordones</span>
+               </div>
+               <div class="especificacion">
+                  <div class="icono">
+                     🔩
+                  </div>
+                  <strong>Configuración de Tacos</strong>
+                  <span>Triangulares en forma de flecha</span>
+               </div>
+               </div>
+    </section>
+</element>
+    <button id="btnVolver" onclick="Volver()">
+     ←
+    </button>
+
+    <script>
+
+      function Volver(){
+         
+      return window.location.href = "/Tikitaka/botinesTikitaka.html";
+      };
+
+      const principal = document.getElementById("imagenPrincipal");
+
+      const imagenes = [
+         "ImágenesBotinesDesc/NikeMercurialSuperfly7.jpg",
+         "ImágenesBotinesDesc/NikeMercurialSuperfly72.jpg",
+         "ImágenesBotinesDesc/NikeMercurialSuperfly73.jpg",
+         "ImágenesBotinesDesc/NikeMercurialSuperfly74.jpg"
+      ];
+
+      let indice = 0;
+
+      const imagen = document.getElementById("imagenPrincipal");
+
+      const puntos = document.querySelectorAll(".punto");
+
+      function actualizarGaleria(){
+         imagen.style.opacity = 0;
+         setTimeout(()=>{
+            imagen.src = imagenes[indice];
+            imagen.style.opacity = 1;
+         },180);
+         puntos.forEach(p=>p.classList.remove("activo"));
+         puntos[indice].classList.add("activo");
+      }
+
+      document.getElementById("siguiente").onclick=()=>{
+         indice++;
+         if(indice>=imagenes.length){
+            indice=0;
+         }
+         actualizarGaleria();
+      };
+
+      document.getElementById("anterior").onclick=()=>{
+         indice--;
+         if(indice<0){
+            indice=imagenes.length-1;
+         }
+         actualizarGaleria();
+      };
+
+      puntos.forEach((punto,i)=>{
+         punto.onclick=()=>{
+            indice=i;
+            actualizarGaleria();
+         };
+      });
+    </script>
+  
+</body>
+</html>
