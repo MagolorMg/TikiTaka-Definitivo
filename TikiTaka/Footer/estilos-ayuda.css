@@ -20,7 +20,7 @@ body {
 
 .help-section h1 {
     text-align: center;
-    font-size: 38px;
+    font-size: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom: 25px;
     letter-spacing: 1px;
@@ -32,13 +32,13 @@ body {
 }
 
 .quick-help h2 {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 5px;
 }
 
 .subtitle {
     color: #666;
-    font-size: 14px;
+    font-size: 17px;
     margin-bottom: 35px;
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .help-col h3 {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 15px;
     color: #171717;
     border-bottom: 2px solid #226b00;
@@ -65,7 +65,7 @@ details {
 }
 
 summary {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
     color: #222;
     cursor: pointer;
@@ -79,7 +79,7 @@ summary:hover {
 }
 
 .answer {
-    font-size: 13px;
+    font-size: 15px;
     color: #555;
     line-height: 1.5;
     margin-top: 8px;
